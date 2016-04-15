@@ -4,4 +4,10 @@ travel-planner {
     background-color: #93D662;
     display: block;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-nav-container {
+    align-self: flex-end;
 }
