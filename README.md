@@ -1,4 +1,4 @@
-## .
+#Cubbles demo component _Travel Planner_
+This is a small demo cubbles component providing a travel planner.
 
-<hr/>
-Note This page is generated based on the markdown-syntax. For details see <http://daringfireball.net/projects/markdown/syntax/>
+[Want to get to know the Cubbles Platform?](https://cubbles.github.io)
