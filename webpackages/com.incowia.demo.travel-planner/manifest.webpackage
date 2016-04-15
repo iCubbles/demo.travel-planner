@@ -13,8 +13,115 @@
   "man": [],
   "artifacts": {
     "apps": [],
-    "elementaryComponents": [],
-    "compoundComponents": [],
-    "utilities": []
+    "elementaryComponents": [
+      {
+        "artifactId": "category-value-select",
+        "description": "Select the value for a given category",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app for <category-value-select> component."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "category-value-select.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "category",
+            "type": "object",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "selection",
+            "type": "object",
+            "direction": [
+               "output"
+            ]
+          }
+        ]
+      },
+      {
+        "artifactId": "main-nav",
+        "description": "The main navigation for switching between categories",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app for <main-nav> component"
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "main-nav.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main",
+              "bootstrap-3.3.5@1.0.3/bootstrap/html-import"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "selectedCategory",
+            "type": "object",
+            "direction": [
+              "output",
+              "input"
+            ]
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [
+      {
+        "artifactId": "travel-planner",
+        "description": "Tavel planner cubbles component",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Travel planner component in action"
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/travel-planner.css",
+              "template.html"
+            ],
+            "dependencies": [
+              "bootstrap-3.3.5@1.0.3/bootstrap/html-import",
+              "this/main-nav/main"
+            ]
+          }
+        ],
+        "slots": [],
+        "members": [
+          {
+            "memberId" : "mainNav",
+            "componentId": "this/main-nav"
+          }
+        ],
+        "connections": [],
+        "inits": []
+      }
+    ]
   }
 }

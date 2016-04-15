@@ -1,0 +1,41 @@
+<link rel="import" href="main-nav-style.html">
+<dom-module id="main-nav">
+
+    <template>
+        <style include="main-nav-style"></style>
+        <div class="btn-group btn-group-justified travel-categories" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="radio" name="cat" id="{{categories.cat1.key}}"
+                       autocomplete="off" {{_checkSelected(categories.cat1.key)}}>
+                {{categories.cat1.displayValue}}
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="cat" id="{{categories.cat2.key}}"
+                       autocomplete="off" {{_checkSelected(categories.cat2.key)}}>
+                {{categories.cat2.displayValue}}
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="cat" id="{{categories.cat3.key}}"
+                       autocomplete="off" {{_checkSelected(categories.cat3.key)}}>
+                {{categories.cat3.displayValue}}
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="cat" id="{{categories.cat4.key}}"
+                       autocomplete="off" {{_checkSelected(categories.cat4.key)}}>
+                {{categories.cat4.displayValue}}
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="cat" id="{{categories.cat5.key}}"
+                       autocomplete="off" {{_checkSelected(categories.cat5.key)}}>
+                {{categories.cat5.displayValue}}
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="cat" id="{{categories.result.key}}"
+                       autocomplete="off" {{_checkSelected(categories.result.key)}}>
+                {{categories.result.displayValue}}
+            </label>
+        </div>
+    </template>
+
+    <script src="main-nav.js"></script>
+</dom-module>
