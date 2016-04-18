@@ -22,7 +22,7 @@
      * Manipulate an element’s local DOM when the element is created and initialized.
      */
     ready: function () {
-
+      this.set('options', [])
     },
 
     /**
@@ -38,10 +38,29 @@
     },
 
     /**
-     *  Observe the Cubbles-Component-Model: If value for slot 'a' has changed ...
+     *  Observe the Cubbles-Component-Model: If value for slot 'category' has changed ...
      */
     modelCategoryChanged: function (category) {
+      this._setOptions(category)
+    },
 
+    _setOptions : function(category) {
+      // use internal polymer array mutation methods so dom-repeat template is rerendered each time the category slot
+      // updates.
+      var _options = this.get('options')
+
+      // empty existing options array
+      while (_options.length > 0) {
+        this.pop('options')
+      }
+
+      // refill options array
+      if (category.options.length > 0) {
+        for (var i = 0; i < category.options.length; i++) {
+          this.push('options', category.options[i])
+        }
+      }
     }
+
   });
 }());

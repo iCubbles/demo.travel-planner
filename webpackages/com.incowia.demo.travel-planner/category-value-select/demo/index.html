@@ -26,6 +26,31 @@
 <div cubx-core-crc>
      <category-value-select cubx-dependency="this/category-value-select/main"></category-value-select>
 </div>
+    <!-- Some helper to set init values-->
+    <script>
+        var category = {
+            displayValue : 'Art der Reise',
+            value : 'travelType',
+            options : [
+                {
+                    displayValue : 'Wellness',
+                    value : 'wellness'
+                },
+                {
+                    displayValue : 'Abenteuer',
+                    value : 'abenteuer'
+                },
+                {
+                    displayValue: 'Pauschal',
+                    value: 'pauschal'
+                }
+            ]
+        }
+        var comp = document.getElementsByTagName('category-value-select')[0]
 
+        document.addEventListener('cifReady', function() {
+            comp.setCategory(category)
+        })
+    </script>
 </body>
 </html>

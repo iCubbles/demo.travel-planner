@@ -32,7 +32,8 @@
               "category-value-select.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main"
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main",
+              "bootstrap-3.3.5@1.0.3/bootstrap/html-import"
             ]
           }
         ],
@@ -108,7 +109,8 @@
             ],
             "dependencies": [
               "bootstrap-3.3.5@1.0.3/bootstrap/html-import",
-              "this/main-nav/main"
+              "this/main-nav/main",
+              "this/category-value-select/main"
             ]
           }
         ],
@@ -117,10 +119,37 @@
           {
             "memberId" : "mainNav",
             "componentId": "this/main-nav"
+          },
+          {
+            "memberId" : "catValueSelect",
+            "componentId" : "this/category-value-select"
           }
         ],
         "connections": [],
-        "inits": []
+        "inits": [
+          {
+            "memberIdRef": "catValueSelect",
+            "slot": "category",
+            "value" : {
+              "displayValue" : "Art der Reise",
+              "value" : "travelType",
+              "options" : [
+                {
+                  "displayValue" : "Wellness",
+                  "value" : "wellness"
+                },
+                {
+                  "displayValue" : "Abenteuer",
+                  "value" : "abenteuer"
+                },
+                {
+                  "displayValue": "Pauschal",
+                  "value": "pauschal"
+                }
+              ]
+            }
+          }
+        ]
       }
     ]
   }

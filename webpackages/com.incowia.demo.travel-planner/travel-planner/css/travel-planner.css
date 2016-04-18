@@ -8,10 +8,12 @@ travel-planner {
     flex-direction: column;
 }
 
-.main-nav-container {
-
+.header {
+    padding: 20px;
 }
 
 .content {
     flex-grow: 1;
+    flex-direction: row;
+    padding: 20px;
 }
