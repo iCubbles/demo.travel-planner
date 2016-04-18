@@ -104,7 +104,7 @@
             "endpointId": "main",
             "resources": [
               "css/travel-planner.css",
-              "template.html"
+              "travel-planner.html"
             ],
             "dependencies": [
               "bootstrap-3.3.5@1.0.3/bootstrap/html-import",

@@ -9,5 +9,9 @@ travel-planner {
 }
 
 .main-nav-container {
-    align-self: flex-end;
+
+}
+
+.content {
+    flex-grow: 1;
 }
