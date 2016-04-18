@@ -49,7 +49,7 @@
             "slotId": "selection",
             "type": "object",
             "direction": [
-               "output"
+              "output"
             ]
           }
         ]
@@ -117,12 +117,12 @@
         "slots": [],
         "members": [
           {
-            "memberId" : "mainNav",
+            "memberId": "mainNav",
             "componentId": "this/main-nav"
           },
           {
-            "memberId" : "catValueSelect",
-            "componentId" : "this/category-value-select"
+            "memberId": "catValueSelect",
+            "componentId": "this/category-value-select"
           }
         ],
         "connections": [],
@@ -130,17 +130,17 @@
           {
             "memberIdRef": "catValueSelect",
             "slot": "category",
-            "value" : {
-              "displayValue" : "Art der Reise",
-              "value" : "travelType",
-              "options" : [
+            "value": {
+              "displayValue": "Art der Reise",
+              "value": "travelType",
+              "options": [
                 {
-                  "displayValue" : "Wellness",
-                  "value" : "wellness"
+                  "displayValue": "Wellness",
+                  "value": "wellness"
                 },
                 {
-                  "displayValue" : "Abenteuer",
-                  "value" : "abenteuer"
+                  "displayValue": "Abenteuer",
+                  "value": "abenteuer"
                 },
                 {
                   "displayValue": "Pauschal",

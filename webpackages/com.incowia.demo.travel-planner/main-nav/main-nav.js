@@ -12,7 +12,7 @@
   CubxPolymer({
     is: 'main-nav',
 
-    categories : {},
+    _cubxReady : false,
 
     /**
      * Manipulate an element’s local DOM when the element is created.
@@ -24,32 +24,8 @@
      * Manipulate an element’s local DOM when the element is created and initialized.
      */
     ready: function () {
-      this.set('categories', {
-        cat1 : {
-          displayValue : 'Reiseart',
-          key : 'cat1'
-        },
-        cat2 : {
-          displayValue : 'Verkehrsmittel',
-          key : 'cat2'
-        },
-        cat3 : {
-          displayValue : 'Budget',
-          key : 'cat3'
-        },
-        cat4 : {
-          displayValue : 'Zeit',
-          key : 'cat4'
-        },
-        cat5 : {
-          displayValue : 'Dauer',
-          key : 'cat5'
-        },
-        result : {
-          displayValue : 'Auswertung',
-          key : 'result'
-        }
-      })
+      this._initCategories()
+      //setup listener
     },
 
     /**
@@ -62,19 +38,196 @@
      * Manipulate an element’s local DOM when the cubbles framework is initialized and ready to work.
      */
     cubxReady: function () {
+      this._cubxReady = true
     },
 
     /**
      *  Observe the Cubbles-Component-Model: If value for slot 'selectedCategory' has changed ...
      */
     modelSelectedCategoryChanged: function (cat) {
-
+      this._checkSelected()
     },
 
-    _checkSelected: function(cat) {
-      if (this.getSelectedCategory().key === cat) {
-        return 'checked'
+    changeSelectedOption : function(event) {
+      console.log(event.target.getAttribute('id'))
+    },
+
+    _checkSelected: function() {
+      if (this._cubxReady) {
+        var selectedCat = this.getSelectedCategory()
+        var buttons = Polymer.dom(this.root).querySelectorAll('.main-nav-btn')
+        for (var i = 0; i < buttons.length; i++) {
+          var btn = buttons[i]
+          if (btn.getAttribute('id') === selectedCat.value) {
+            Polymer.dom(btn).classList.add('active')
+          } else {
+            Polymer.dom(btn).classList.remove('active')
+          }
+        }
       }
+    },
+
+    _initCategories : function() {
+      this.set('categories', {
+        cat1 : {
+          displayValue : 'Reiseart',
+          value : 'typeOfTravel',
+          options: [
+            {
+              displayValue: 'Wellness',
+              value: 'wellness'
+            },
+            {
+              displayValue: 'Abenteuer',
+              value: 'adventure'
+            },
+            {
+              displayValue: 'Pauschal',
+              value: 'package'
+            },
+            {
+              displayValue: 'Kurzurlaub',
+              value: 'shortTrip'
+            },
+            {
+              displayValue: 'Städtereise',
+              value: 'cityTrip'
+            },
+            {
+              displayValue: 'Strand',
+              value: 'beach'
+            },
+            {
+              displayValue: 'Rucksack',
+              value: 'backpack'
+            }
+          ]
+        },
+        cat2 : {
+          displayValue : 'Verkehrsmittel',
+          value : 'typeOfTransport',
+          options : [
+            {
+              displayValue: 'Bahn',
+              value: 'train'
+            },
+            {
+              displayValue: 'Bus',
+              value: 'bus'
+            },
+            {
+              displayValue: 'ÖPNV',
+              value: 'publicTransport'
+            },
+            {
+              displayValue: 'PKW',
+              value: 'car'
+            },
+            {
+              displayValue: 'Flugzeug',
+              value: 'plain'
+            },
+            {
+              displayValue: 'Schiff',
+              value: 'ship'
+            },
+            {
+              displayValue: 'Motorrad',
+              value: 'motorbike'
+            }
+          ]
+        },
+        cat3 : {
+          displayValue : 'Budget',
+          value : 'budget',
+          options : [
+            {
+              displayValue: 'Luxus',
+              value: 'luxury'
+            },
+            {
+              displayValue: 'Gehobene Ausstattung',
+              value: 'uptown'
+            },
+            {
+              displayValue: 'Einfache Ausstattung',
+              value: 'simple'
+            },
+            {
+              displayValue: 'Puristisch',
+              value: 'puristic'
+            }
+          ]
+        },
+        cat4 : {
+          displayValue : 'Region',
+          value : 'region',
+          options : [
+            {
+              displayValue: 'Regional',
+              value: 'nearby'
+            },
+            {
+              displayValue: 'Deutschland',
+              value: 'germany'
+            },
+            {
+              displayValue: 'Europa',
+              value: 'europe'
+            },
+            {
+              displayValue: 'Amerika',
+              value: 'america'
+            },
+            {
+              displayValue: 'Afrika',
+              value: 'africa'
+            },
+            {
+              displayValue: 'Asien',
+              value: 'asia'
+            },
+            {
+              displayValue: 'Australien',
+              value: 'australia'
+            },
+            {
+              displayValue: 'Weltweit',
+              value: 'worldwide'
+            }
+          ]
+        },
+        cat5 : {
+          displayValue : 'Dauer',
+          value : 'duration',
+          options : [
+            {
+              displayValue: 'Max. 5 Tage',
+              value: '5daysMac'
+            },
+            {
+              displayValue: '1 Woche',
+              value: '1week'
+            },
+            {
+              displayValue: '2 Wochen',
+              value: '2weeks'
+            },
+            {
+              displayValue: '3 Wochen',
+              value: '3weeks'
+            },
+            {
+              displayValue: '4 Wochen und länger',
+              value: '4+weeks'
+            }
+          ]
+        },
+        result : {
+          displayValue : 'Auswertung',
+          value : 'result'
+        }
+      })
     }
   });
 }());
