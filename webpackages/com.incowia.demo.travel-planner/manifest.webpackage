@@ -94,6 +94,46 @@
             ]
           }
         ]
+      },
+      {
+        "artifactId": "travel-evaluation",
+        "description": "Evaluates the selected options in the travel planner categories",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "travel-evaluation.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.8.0-SNAPSHOT/cubxpolymer/main",
+              "bootstrap-3.3.5@1.0.3/bootstrap/html-import"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "selections",
+            "type": "object",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "visible",
+            "type": "boolean",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
       }
     ],
     "compoundComponents": [
@@ -117,7 +157,8 @@
             "dependencies": [
               "bootstrap-3.3.5@1.0.3/bootstrap/html-import",
               "this/main-nav/main",
-              "this/category-value-select/main"
+              "this/category-value-select/main",
+              "this/travel-evaluation/main"
             ]
           }
         ],
@@ -130,6 +171,10 @@
           {
             "memberId": "catValueSelect",
             "componentId": "this/category-value-select"
+          },
+          {
+            "memberId": "evaluation",
+            "componentId": "this/travel-evaluation/"
           }
         ],
         "connections": [
@@ -156,7 +201,18 @@
             }
           }
         ],
-        "inits": []
+        "inits": [
+          {
+            "memberIdRef": "evaluation",
+            "slot": "visible",
+            "value" : false
+          },
+          {
+            "memberIdRef": "catValueSelect",
+            "slot": "visible",
+            "value" : true
+          }
+        ]
       }
     ]
   }
