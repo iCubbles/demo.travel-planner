@@ -9,30 +9,45 @@
                     id="{{categories.cat1.value}}"
                     on-click="changeSelectedOption">
                 {{categories.cat1.displayValue}}
+                <template is="dom-if" if="{{categories.cat1.checked}}">
+                    &nbsp;<span class="badge">&#10003;</span>
+                </template>
             </button>
             <button class="col-xs-2 btn btn-primary main-nav-btn"
                     type=button"
                     id="{{categories.cat2.value}}"
                     on-click="changeSelectedOption">
                 {{categories.cat2.displayValue}}
+                <template is="dom-if" if="{{categories.cat2.checked}}">
+                    &nbsp;<span class="badge">&#10003;</span>
+                </template>
             </button>
             <button class="col-xs-2 btn btn-primary main-nav-btn"
                     type=button"
                     id="{{categories.cat3.value}}"
                     on-click="changeSelectedOption">
                 {{categories.cat3.displayValue}}
+                <template is="dom-if" if="{{categories.cat3.checked}}">
+                    &nbsp;<span class="badge">&#10003;</span>
+                </template>
             </button>
             <button class="col-xs-2 btn btn-primary main-nav-btn"
                     type=button"
                     id="{{categories.cat4.value}}"
                     on-click="changeSelectedOption">
                 {{categories.cat4.displayValue}}
+                <template is="dom-if" if="{{categories.cat4.checked}}">
+                    &nbsp;<span class="badge">&#10003;</span>
+                </template>
             </button>
             <button class="col-xs-2 btn btn-primary main-nav-btn"
                     type=button"
                     id="{{categories.cat5.value}}"
                     on-click="changeSelectedOption">
                 {{categories.cat5.displayValue}}
+                <template is="dom-if" if="{{categories.cat5.checked}}">
+                    &nbsp;<span class="badge">&#10003;</span>
+                </template>
             </button>
             <button class="col-xs-2 btn btn-primary main-nav-btn"
                     type=button"

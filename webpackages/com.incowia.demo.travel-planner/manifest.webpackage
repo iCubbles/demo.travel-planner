@@ -42,13 +42,7 @@
             "slotId": "category",
             "type": "object",
             "direction": [
-              "input"
-            ]
-          },
-          {
-            "slotId": "selection",
-            "type": "object",
-            "direction": [
+              "input",
               "output"
             ]
           }
@@ -82,7 +76,13 @@
             "slotId": "selectedCategory",
             "type": "object",
             "direction": [
-              "output",
+              "output"
+            ]
+          },
+          {
+            "slotId": "updateCategory",
+            "type": "object",
+            "direction": [
               "input"
             ]
           }
@@ -125,31 +125,31 @@
             "componentId": "this/category-value-select"
           }
         ],
-        "connections": [],
-        "inits": [
+        "connections": [
           {
-            "memberIdRef": "catValueSelect",
-            "slot": "category",
-            "value": {
-              "displayValue": "Art der Reise",
-              "value": "travelType",
-              "options": [
-                {
-                  "displayValue": "Wellness",
-                  "value": "wellness"
-                },
-                {
-                  "displayValue": "Abenteuer",
-                  "value": "abenteuer"
-                },
-                {
-                  "displayValue": "Pauschal",
-                  "value": "pauschal"
-                }
-              ]
+            "connectionId": "mainNavToCategorySelect",
+            "source": {
+              "memberIdRef": "mainNav",
+              "slot": "selectedCategory"
+            },
+            "destination": {
+              "memberIdRef": "catValueSelect",
+              "slot": "category"
+            }
+          },
+          {
+            "connectionId": "categorySelectToMainNav",
+            "source": {
+              "memberIdRef": "catValueSelect",
+              "slot": "category"
+            },
+            "destination": {
+              "memberIdRef": "mainNav",
+              "slot": "updateCategory"
             }
           }
-        ]
+        ],
+        "inits": []
       }
     ]
   }

@@ -7,9 +7,9 @@
             <h2>{{model.category.displayValue}}</h2>
             <div class="btn-group-vertical" data-toggle="buttons">
                 <template is="dom-repeat" items="{{options}}" as="option">
-                    <label class="btn btn-primary">
-                        <input type="radio" name="options" id="{{option.value}}" autocomplete="off">{{option.displayValue}}
-                    </label>
+                    <button type="button" class$="btn btn-primary {{_determineActive(option.checked)}}" id="{{option.value}}" on-click="setOption">
+                        {{option.displayValue}}
+                    </button>
                 </template>
             </div>
         </div>

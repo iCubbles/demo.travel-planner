@@ -39,18 +39,19 @@
      */
     cubxReady: function () {
       this._cubxReady = true
+      this.setSelectedCategory(this.get('categories').cat1)
+      this._checkSelected()
     },
 
-    /**
-     *  Observe the Cubbles-Component-Model: If value for slot 'selectedCategory' has changed ...
-     */
-    modelSelectedCategoryChanged: function (cat) {
-      this._checkSelected()
+    modelUpdateCategoryChanged: function(category) {
+      //update category in internal _categories property
+      this._updateCategory(category)
     },
 
     changeSelectedOption : function(event) {
       var value = event.target.getAttribute('id')
       this.setSelectedCategory(this._getCategoryByValue(value))
+      this._checkSelected()
     },
 
     _checkSelected: function() {
@@ -78,6 +79,15 @@
       return null
     },
 
+    _updateCategory: function(selection) {
+      var categories = this.get('categories')
+      for (var key in categories) {
+        if (categories[key].value === selection.value) {
+          this.set('categories.' + key, selection)
+          return
+        }
+      }
+    },
 
     _initCategories : function() {
       this.set('categories', {
@@ -88,66 +98,80 @@
           options: [
             {
               displayValue: 'Wellness',
-              value: 'wellness'
+              value: 'wellness',
+              checked: false
             },
             {
               displayValue: 'Abenteuer',
-              value: 'adventure'
+              value: 'adventure',
+              checked: false
             },
             {
               displayValue: 'Pauschal',
-              value: 'package'
+              value: 'package',
+              checked: false
             },
             {
               displayValue: 'Kurzurlaub',
-              value: 'shortTrip'
+              value: 'shortTrip',
+              checked: false
             },
             {
               displayValue: 'Städtereise',
-              value: 'cityTrip'
+              value: 'cityTrip',
+              checked: false
             },
             {
               displayValue: 'Strand',
-              value: 'beach'
+              value: 'beach',
+              checked: false
             },
             {
               displayValue: 'Rucksack',
-              value: 'backpack'
+              value: 'backpack',
+              checked: false
             }
           ]
         },
         cat2 : {
-          displayValue : 'Verkehrsmittel',
+          displayValue : 'Reisemittel',
           value : 'typeOfTransport',
           checked : false,
           options : [
             {
               displayValue: 'Bahn',
-              value: 'train'
+              value: 'train',
+              checked: false
             },
             {
               displayValue: 'Bus',
-              value: 'bus'
+              value: 'bus',
+              checked: false
             },
             {
               displayValue: 'ÖPNV',
-              value: 'publicTransport'
+              value: 'publicTransport',
+              checked: false
             },
             {
               displayValue: 'PKW',
-              value: 'car'
+              value: 'car',
+              checked: false
             },
             {
               displayValue: 'Flugzeug',
-              value: 'plain'
+              value: 'plain',
+              checked: false
             },
             {
               displayValue: 'Schiff',
-              value: 'ship'
+              value: 'ship',
+              checked: false
             },
             {
               displayValue: 'Motorrad',
-              value: 'motorbike'
+              value: 'motorbike',
+              checked: false
             }
           ]
         },
@@ -158,19 +182,23 @@
           options : [
             {
               displayValue: 'Luxus',
-              value: 'luxury'
+              value: 'luxury',
+              checked: false
             },
             {
               displayValue: 'Gehobene Ausstattung',
-              value: 'uptown'
+              value: 'uptown',
+              checked: false
             },
             {
               displayValue: 'Einfache Ausstattung',
-              value: 'simple'
+              value: 'simple',
+              checked: false
             },
             {
               displayValue: 'Puristisch',
-              value: 'puristic'
+              value: 'puristic',
+              checked: false
             }
           ]
         },
@@ -181,35 +209,43 @@
           options : [
             {
               displayValue: 'Regional',
-              value: 'nearby'
+              value: 'nearby',
+              checked: false
             },
             {
               displayValue: 'Deutschland',
-              value: 'germany'
+              value: 'germany',
+              checked: false
             },
             {
               displayValue: 'Europa',
-              value: 'europe'
+              value: 'europe',
+              checked: false
             },
             {
               displayValue: 'Amerika',
-              value: 'america'
+              value: 'america',
+              checked: false
             },
             {
               displayValue: 'Afrika',
-              value: 'africa'
+              value: 'africa',
+              checked: false
             },
             {
               displayValue: 'Asien',
-              value: 'asia'
+              value: 'asia',
+              checked: false
             },
             {
               displayValue: 'Australien',
-              value: 'australia'
+              value: 'australia',
+              checked: false
             },
             {
               displayValue: 'Weltweit',
-              value: 'worldwide'
+              value: 'worldwide',
+              checked: false
             }
           ]
         },
@@ -220,23 +256,28 @@
           options : [
             {
               displayValue: 'Max. 5 Tage',
-              value: '5daysMac'
+              value: '5daysMac',
+              checked: false
             },
             {
               displayValue: '1 Woche',
-              value: '1week'
+              value: '1week',
+              checked: false
             },
             {
               displayValue: '2 Wochen',
-              value: '2weeks'
+              value: '2weeks',
+              checked: false
             },
             {
               displayValue: '3 Wochen',
-              value: '3weeks'
+              value: '3weeks',
+              checked: false
             },
             {
               displayValue: '4 Wochen und länger',
-              value: '4+weeks'
+              value: '4+weeks',
+              checked: false
             }
           ]
         },
