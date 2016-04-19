@@ -44,6 +44,14 @@
       this._setOptions(category)
     },
 
+    modelVisibleChanged: function(value) {
+      if (value === true) {
+        this.style.visibility = 'visible'
+      } else if(value === false) {
+        this.style.visibility = 'hidden'
+      }
+    },
+
     setOption: function(event) {
       var value = event.target.getAttribute('id') //get option value
       var category = this.getCategory()

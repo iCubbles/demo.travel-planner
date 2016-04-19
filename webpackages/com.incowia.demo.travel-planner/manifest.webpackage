@@ -48,7 +48,7 @@
           },
           {
             "slotId": "visible",
-            "type": "string",
+            "type": "boolean",
             "direction": [
               "input"
             ]
