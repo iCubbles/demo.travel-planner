@@ -49,7 +49,8 @@
     },
 
     changeSelectedOption : function(event) {
-      console.log(event.target.getAttribute('id'))
+      var value = event.target.getAttribute('id')
+      this.setSelectedCategory(this._getCategoryByValue(value))
     },
 
     _checkSelected: function() {
@@ -66,6 +67,17 @@
         }
       }
     },
+
+    _getCategoryByValue : function(value) {
+      var categories = this.get('categories')
+      for (var key in categories) {
+        if (categories[key].value === value) {
+          return categories[key]
+        }
+      }
+      return null
+    },
+
 
     _initCategories : function() {
       this.set('categories', {
