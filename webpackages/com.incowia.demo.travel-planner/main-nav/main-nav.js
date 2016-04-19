@@ -84,6 +84,7 @@
         cat1 : {
           displayValue : 'Reiseart',
           value : 'typeOfTravel',
+          checked : false,
           options: [
             {
               displayValue: 'Wellness',
@@ -118,6 +119,7 @@
         cat2 : {
           displayValue : 'Verkehrsmittel',
           value : 'typeOfTransport',
+          checked : false,
           options : [
             {
               displayValue: 'Bahn',
@@ -152,6 +154,7 @@
         cat3 : {
           displayValue : 'Budget',
           value : 'budget',
+          checked : false,
           options : [
             {
               displayValue: 'Luxus',
@@ -174,6 +177,7 @@
         cat4 : {
           displayValue : 'Region',
           value : 'region',
+          checked : false,
           options : [
             {
               displayValue: 'Regional',
@@ -212,6 +216,7 @@
         cat5 : {
           displayValue : 'Dauer',
           value : 'duration',
+          checked : false,
           options : [
             {
               displayValue: 'Max. 5 Tage',
