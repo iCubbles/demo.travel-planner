@@ -25,6 +25,7 @@
      */
     ready: function () {
       this._initCategories()
+      this._back = 'cat1'
       //setup listener
     },
 
@@ -50,6 +51,26 @@
 
     changeSelectedOption : function(event) {
       var value = event.target.getAttribute('id')
+      this._changeSelectedCatByValue(value)
+    },
+
+    back : function() {
+      var activeBtn = Polymer.dom(this.root).querySelector('.main-nav-btn.active')
+      var dataBack = activeBtn.dataBack
+      if (dataBack) {
+        this._changeSelectedCatByValue(dataBack)
+      }
+    },
+
+    next : function() {
+      var activeBtn = Polymer.dom(this.root).querySelector('.main-nav-btn.active')
+      var dataNext = activeBtn.dataNext
+      if (dataNext) {
+        this._changeSelectedCatByValue(dataNext)
+      }
+    },
+
+    _changeSelectedCatByValue : function(value) {
       this.setSelectedCategory(this._getCategoryByValue(value))
       this._checkSelected()
     },
@@ -79,11 +100,11 @@
       return null
     },
 
-    _updateCategory: function(selection) {
+    _updateCategory: function(cat) {
       var categories = this.get('categories')
       for (var key in categories) {
-        if (categories[key].value === selection.value) {
-          this.set('categories.' + key, selection)
+        if (categories[key].value === cat.value) {
+          this.set('categories.' + key, cat)
           return
         }
       }

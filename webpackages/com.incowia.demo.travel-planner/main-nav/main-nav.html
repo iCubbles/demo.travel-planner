@@ -3,10 +3,15 @@
 
     <template>
         <style include="main-nav-style"></style>
+        <div class="step-btns">
+            <button type="button" on-click="back" class="btn btn-primary"><b>&lt;</b></button>
+            <button type="button" on-click="next" class="btn btn-primary">weiter <b>&gt;</b></button>
+        </div>
         <div class="btn-group travel-categories">
             <button class="col-xs-2 btn btn-primary main-nav-btn active"
                     type=button"
                     id="{{categories.cat1.value}}"
+                    data-next="{{categories.cat2.value}}"
                     on-click="changeSelectedOption">
                 {{categories.cat1.displayValue}}
                 <template is="dom-if" if="{{categories.cat1.checked}}">
@@ -16,6 +21,8 @@
             <button class="col-xs-2 btn btn-primary main-nav-btn"
                     type=button"
                     id="{{categories.cat2.value}}"
+                    data-back="{{categories.cat1.value}}"
+                    data-next="{{categories.cat3.value}}"
                     on-click="changeSelectedOption">
                 {{categories.cat2.displayValue}}
                 <template is="dom-if" if="{{categories.cat2.checked}}">
@@ -25,6 +32,8 @@
             <button class="col-xs-2 btn btn-primary main-nav-btn"
                     type=button"
                     id="{{categories.cat3.value}}"
+                    data-back="{{categories.cat2.value}}"
+                    data-next="{{categories.cat4.value}}"
                     on-click="changeSelectedOption">
                 {{categories.cat3.displayValue}}
                 <template is="dom-if" if="{{categories.cat3.checked}}">
@@ -34,6 +43,8 @@
             <button class="col-xs-2 btn btn-primary main-nav-btn"
                     type=button"
                     id="{{categories.cat4.value}}"
+                    data-back="{{categories.cat3.value}}"
+                    data-next="{{categories.cat5.value}}"
                     on-click="changeSelectedOption">
                 {{categories.cat4.displayValue}}
                 <template is="dom-if" if="{{categories.cat4.checked}}">
@@ -43,6 +54,8 @@
             <button class="col-xs-2 btn btn-primary main-nav-btn"
                     type=button"
                     id="{{categories.cat5.value}}"
+                    data-back="{{categories.cat4.value}}"
+                    data-next="{{categories.result.value}}"
                     on-click="changeSelectedOption">
                 {{categories.cat5.displayValue}}
                 <template is="dom-if" if="{{categories.cat5.checked}}">
@@ -52,6 +65,7 @@
             <button class="col-xs-2 btn btn-primary main-nav-btn"
                     type=button"
                     id="{{categories.result.value}}"
+                    data-back="{{categories.cat5.value}}"
                     on-click="changeSelectedOption">
                 {{categories.result.displayValue}}
             </button>

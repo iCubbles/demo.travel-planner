@@ -45,6 +45,13 @@
               "input",
               "output"
             ]
+          },
+          {
+            "slotId": "visible",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
           }
         ]
       },
