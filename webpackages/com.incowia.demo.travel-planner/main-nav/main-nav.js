@@ -107,21 +107,36 @@
       for (var key in categories) {
         if (categories[key].value === cat.value) {
           this.set('categories.' + key, cat)
-          // this._updateSelections(categories)
-          return
+          break
         }
       }
+      this._updateSelections(categories)
+      return
     },
 
     _updateSelections: function(categories) {
       var selections = {}
       for (var key in categories) {
-        selections[key] = {
-          value : categories[key].value,
-          displayValue: categories[key].displayValue
+        if (categories[key].hasOwnProperty('options')) {
+          selections[key] = {
+            value : categories[key].value,
+            displayValue: categories[key].displayValue,
+            optionSelected: this._getSelectedOption(categories[key].options)
+          }
         }
-        //TODO: find selected option and option value and displayValue to selections[key]
       }
+      this.setSelections(selections)
+    },
+
+    _getSelectedOption: function(options) {
+      // iterate over all given options and return the first one for which property 'checked' is true
+      // if no one is find return null
+      for (var i = 0; i < options.length; i++) {
+        if (options[i].checked) {
+          return options[i]
+        }
+      }
+      return null
     },
 
     _setVisibility: function(cat) {
