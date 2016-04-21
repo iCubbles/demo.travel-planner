@@ -204,7 +204,8 @@
               "bootstrap-3.3.5@1.0.3/bootstrap/html-import",
               "this/main-nav/main",
               "this/category-value-select/main",
-              "this/travel-evaluation/main"
+              "this/travel-evaluation/main",
+              "this/co2-footprint/main"
             ]
           }
         ],
@@ -221,6 +222,10 @@
           {
             "memberId": "evaluation",
             "componentId": "this/travel-evaluation"
+          },
+          {
+            "memberId": "footprint",
+            "componentId": "this/co2-footprint"
           }
         ],
         "connections": [

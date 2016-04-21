@@ -15,5 +15,26 @@ travel-planner {
 .content {
     flex-grow: 1;
     flex-direction: row;
-    padding: 20px;
+    padding: 0px 0px 0px 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+category-value-select, travel-evaluation {
+    align-self: flex-start;
+    flex: 1;
+}
+
+co2-footprint {
+    background-image: url('../img/skala-hintergrund.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-position-y: 68px;
+    background-size: 68%;
+    width: 100px;
+}
+
+co2-footprint svg{
+    position: relative;
+    right: -18px;
 }
