@@ -106,6 +106,13 @@
             "direction": [
               "output"
             ]
+          },
+          {
+            "slotId": "selections",
+            "type": "object",
+            "direction": [
+              "output"
+            ]
           }
         ]
       },
