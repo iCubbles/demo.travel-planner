@@ -71,7 +71,9 @@
     },
 
     _changeSelectedCatByValue : function(value) {
-      this.setSelectedCategory(this._getCategoryByValue(value))
+      var cat = this._getCategoryByValue(value)
+      this._setVisibility(cat);
+      this.setSelectedCategory(cat)
       this._checkSelected()
     },
 
@@ -107,6 +109,16 @@
           this.set('categories.' + key, cat)
           return
         }
+      }
+    },
+
+    _setVisibility: function(cat) {
+      if (cat.value === this.get('categories').result.value) {
+        this.setEvaluationVisible(true)
+        this.setCatSelectVisible(false)
+      } else {
+        this.setEvaluationVisible(false)
+        this.setCatSelectVisible(true)
       }
     },
 

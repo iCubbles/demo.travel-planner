@@ -39,9 +39,9 @@
 
     modelVisibleChanged: function(value) {
       if (value === true) {
-        this.style.visibility = 'visible'
+        this.style.display = 'inline'
       } else if(value === false) {
-        this.style.visibility = 'hidden'
+        this.style.display = 'none'
       }
     },
 

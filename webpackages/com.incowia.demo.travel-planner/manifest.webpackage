@@ -92,6 +92,20 @@
             "direction": [
               "input"
             ]
+          },
+          {
+            "slotId": "catSelectVisible",
+            "type": "boolean",
+            "direction": [
+              "output"
+            ]
+          },
+          {
+            "slotId": "evaluationVisible",
+            "type": "boolean",
+            "direction": [
+              "output"
+            ]
           }
         ]
       },
@@ -174,7 +188,7 @@
           },
           {
             "memberId": "evaluation",
-            "componentId": "this/travel-evaluation/"
+            "componentId": "this/travel-evaluation"
           }
         ],
         "connections": [
@@ -198,6 +212,28 @@
             "destination": {
               "memberIdRef": "mainNav",
               "slot": "updateCategory"
+            }
+          },
+          {
+            "connectionId": "catSelectVisibility",
+            "source": {
+              "memberIdRef": "mainNav",
+              "slot": "catSelectVisible"
+            },
+            "destination": {
+              "memberIdRef": "catValueSelect",
+              "slot": "visible"
+            }
+          },
+          {
+            "connectionId": "evaluationVisibility",
+            "source": {
+              "memberIdRef": "mainNav",
+              "slot": "evaluationVisible"
+            },
+            "destination": {
+              "memberIdRef": "evaluation",
+              "slot": "visible"
             }
           }
         ],
