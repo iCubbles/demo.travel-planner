@@ -65,7 +65,7 @@
         value = 100
       }
 
-      var newCy = this._cYmin + (range * value / 100)
+      var newCy = this._cYmax - (range * value / 100)
       Polymer.dom(circle).setAttribute('cy', newCy)
     }
   });

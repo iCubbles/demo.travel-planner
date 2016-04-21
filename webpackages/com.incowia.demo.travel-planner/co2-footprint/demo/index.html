@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>app</title>
+    <title>&lt;co2-footprint&gt;</title>
 
     <script src="../../../cubx.core.rte@1.8.0-SNAPSHOT/webcomponents/webcomponents-lite.js"></script>
 
@@ -23,9 +23,25 @@
     Place Cubbles-Component there as child element.
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
-<div cubx-core-crc>
-     <co2-footprint cubx-dependency="this/co2-footprint/main"></co2-footprint>
+<div>
+    <input id="input" value type="range" max="100" min="0" step="1">
 </div>
+<hr>
+<div cubx-core-crc>
+    <co2-footprint cubx-dependency="this/co2-footprint/main"></co2-footprint>
+</div>
+
+<script>
+    //logic for getting value from range input to scala
+    document.addEventListener('cifReady', function(){
+        var comp = document.getElementsByTagName('co2-footprint')[0]
+        var input = document.getElementById('input')
+
+        input.addEventListener('input', function(event) {
+            comp.setValue(event.target.value)
+        })
+    })
+</script>
 
 </body>
 </html>
