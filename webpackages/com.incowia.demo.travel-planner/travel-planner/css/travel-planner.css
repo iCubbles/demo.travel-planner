@@ -1,11 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,500,500italic);
+
 travel-planner {
     width: 620px;
     min-height: 620px;
-    background-color: #93D662;
+    /*background-color: #93D662;*/
     display: block;
     color: #ffffff;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 .header {
@@ -37,4 +40,43 @@ co2-footprint {
 co2-footprint svg{
     position: relative;
     right: -18px;
+}
+
+.btn-group-vertical>.btn:first-child:not(:last-child) {
+    border-top-right-radius: 0px;
+}
+
+.btn-primary {
+    background-color: #93d661;
+    border-left-color: #93d661;
+    border-right-color: #93d661;
+    border-top-color: #559a41;
+    border-bottom-color: #559a41;
+    border-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.btn-primary.active {
+    background-color: #69bd4f;
+    border-top-color: #93d661;
+    border-bottom-color: #93d661;
+    border-left-color: #559a41;
+    border-right-color: #559a41;
+}
+
+.btn:focus, .btn:hover, .btn.active:hover, .btn.active:focus {
+    background-color: #69bd4f;
+    border-top-color: #93d661;
+    border-bottom-color: #93d661;
+    border-left-color: #559a41;
+    border-right-color: #559a41;
+    outline: none;
+}
+
+category-value-select .btn {
+    font-size: 15px;
+    font-weight: 500;
 }
