@@ -4,6 +4,29 @@
         Get help: https://www.polymer-project.org/1.0/docs/devguide/styling.html#xscope-styling-details
         -->
         <style>
+            .btn.btn-primary.active {
+                background-image: url('img/option_checked.png') !important;
+            }
+
+            .btn.btn-primary {
+                background-image: url('img/option_unchecked.png');
+                background-repeat: no-repeat;
+                background-position: right center;
+            }
+
+            .btn.btn-primary:hover, .btn.btn-focus {
+                background-image: url('img/option_unchecked_focus.png');
+            }
+
+            .arrow-down {
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 10px solid #f5b120;
+                margin-left: 12px;
+            }
+
         </style>
     </template>
 </dom-module>

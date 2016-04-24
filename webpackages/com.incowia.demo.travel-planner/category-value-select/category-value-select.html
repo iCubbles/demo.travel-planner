@@ -4,10 +4,12 @@
     <template>
         <style include="category-value-select-style"></style>
         <div>
-            <h2>{{model.category.displayValue}}</h2>
+            <h2 class="category-select-heading">{{model.category.displayValue}}</h2>
+            <div class="arrow-down"></div>
             <div class="btn-group-vertical" data-toggle="buttons">
                 <template is="dom-repeat" items="{{options}}" as="option">
-                    <button type="button" class$="btn btn-primary {{_determineActive(option.checked)}}" id="{{option.value}}" on-click="setOption">
+                    <button type="button" class$="btn btn-primary {{_determineActive(option.checked)}}"
+                            id="{{option.value}}" on-click="setOption">
                         {{option.displayValue}}
                     </button>
                 </template>

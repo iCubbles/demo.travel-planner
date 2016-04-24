@@ -6,11 +6,62 @@
         <style>
             .travel-categories {
                 width: 100%;
+                display: flex;
             }
 
             .step-btns {
                 margin-bottom: 20px;
                 margin-left: 20px;
+            }
+
+            .step-btns > .btn {
+                font-size: 15px;
+            }
+
+            .main-nav-btn{
+                height: 54px;
+                flex: 1;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .main-nav-btn.cat1{
+                background-image: url('img/cat1_unset.png');
+            }
+            .main-nav-btn.cat1[data-checked]{
+                background-image: url('img/cat1_set.png');
+            }
+
+            .main-nav-btn.cat2{
+                background-image: url('img/cat2_unset.png');
+            }
+            .main-nav-btn.cat2[data-checked]{
+                background-image: url('img/cat2_set.png');
+            }
+
+            .main-nav-btn.cat3{
+                background-image: url('img/cat3_unset.png');
+            }
+            .main-nav-btn.cat3[data-checked]{
+                background-image: url('img/cat3_set.png');
+            }
+
+            .main-nav-btn.cat4{
+                background-image: url('img/cat4_unset.png');
+            }
+            .main-nav-btn.cat4[data-checked]{
+                background-image: url('img/cat4_set.png');
+            }
+
+            .main-nav-btn.cat5{
+                background-image: url('img/cat5_unset.png');
+            }
+            .main-nav-btn.cat5[data-checked]{
+                background-image: url('img/cat5_set.png');
+            }
+
+            .main-nav-btn.result{
+                background-image: url('img/result_set.png');
             }
         </style>
     </template>
