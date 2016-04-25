@@ -10,6 +10,9 @@ travel-planner {
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
     border-top: 5px solid #93d661;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .header {
@@ -122,4 +125,117 @@ travel-evaluation .heading,
 travel-evaluation .arrow-down,
 .category-value-select .arrow-down{
     margin-bottom: 10px;
+}
+
+/*Background classes for different options in categories*/
+travel-planner.bg1a {
+    background-image: url('../img/1a.png');
+}
+
+travel-planner.bg1b {
+    background-image: url('../img/1b.png');
+}
+
+travel-planner.bg1c {
+    background-image: url('../img/1c.png');
+}
+
+travel-planner.bg1d {
+    background-image: url('../img/1d.png');
+}
+
+travel-planner.bg1e {
+    background-image: url('../img/1e.png');
+}
+
+travel-planner.bg1f {
+    background-image: url('../img/1f.png');
+}
+
+travel-planner.bg1g {
+    background-image: url('../img/1g.png');
+}
+
+travel-planner.bg2a {
+    background-image: url('../img/2a.png');
+}
+
+travel-planner.bg2b {
+    background-image: url('../img/2b.png');
+}
+
+travel-planner.bg2c {
+    background-image: url('../img/2c.png');
+}
+
+travel-planner.bg2d {
+    background-image: url('../img/2d.png');
+}
+
+travel-planner.bg2e {
+    background-image: url('../img/2e.png');
+}
+
+travel-planner.bg2f {
+    background-image: url('../img/2f.png');
+}
+
+travel-planner.bg2g {
+    background-image: url('../img/2g.png');
+}
+
+travel-planner.bg3a {
+    background-image: url('../img/3a.png');
+}
+
+travel-planner.bg3b {
+    background-image: url('../img/3b.png');
+}
+
+travel-planner.bg3c {
+    background-image: url('../img/3c.png');
+}
+
+travel-planner.bg3d {
+    background-image: url('../img/3d.png');
+}
+
+travel-planner.bg4a {
+    background-image: url('../img/4a.png');
+}
+
+travel-planner.bg4b {
+    background-image: url('../img/4b.png');
+}
+
+travel-planner.bg4c {
+    background-image: url('../img/4c.png');
+}
+
+travel-planner.bg4d {
+    background-image: url('../img/4d.png');
+}
+
+travel-planner.bg4e {
+    background-image: url('../img/4e.png');
+}
+
+travel-planner.bg4f {
+    background-image: url('../img/4f.png');
+}
+
+travel-planner.bg4g {
+    background-image: url('../img/4g.png');
+}
+
+travel-planner.bg4h {
+    background-image: url('../img/4h.png');
+}
+
+travel-planner.bg5 {
+    background-image: url('../img/5.png');
+}
+
+travel-planner.bg6 {
+    background-image: url('../img/6.png');
 }

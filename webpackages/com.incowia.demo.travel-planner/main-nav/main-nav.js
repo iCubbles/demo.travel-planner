@@ -47,6 +47,11 @@
     modelUpdateCategoryChanged: function(category) {
       //update category in internal _categories property
       this._updateCategory(category)
+      this._setCompoundParentClass(this._determineBgClass())
+    },
+
+    modelSelectedCategoryChanged: function(category) {
+      this._setCompoundParentClass(this._determineBgClass())
     },
 
     changeSelectedOption : function(event) {
@@ -149,6 +154,42 @@
       }
     },
 
+    _setCompoundParentClass: function(cssClass) {
+      var parentNode = Polymer.dom(this)
+
+      do {
+          parentNode = Polymer.dom(parentNode).parentNode
+      } while (parentNode.tagName.toLowerCase() !== 'travel-planner' && parentNode.tagName.toLowerCase() !== 'body')
+
+      if (parentNode.isCompoundComponent && parentNode.tagName.toLowerCase() === 'travel-planner') {
+        //remove css bgClass if there is alreay set one
+        if (this._currentBgClass) {
+          parentNode.classList.remove(this._currentBgClass)
+        }
+        //remember added css class to remove it again when a new bgClass is set
+        this._currentBgClass = cssClass
+        parentNode.classList.add(cssClass)
+      }
+    },
+
+    _determineBgClass: function() {
+      var currentCatValue = this.getSelectedCategory().value
+      var currentCat = this._getCategoryByValue(currentCatValue)
+
+      if (!currentCat.hasOwnProperty('options')) {
+        return currentCat.bgClass
+      }
+
+      for (var i = 0; i < currentCat.options.length; i++) {
+        var opt = currentCat.options[i]
+        if (opt.checked) {
+          return opt.bgClass
+        }
+      }
+
+      return currentCat.options[0].bgClass
+    },
+
     _initCategories : function() {
       this.set('categories', {
         cat1 : {
@@ -159,37 +200,44 @@
             {
               displayValue: 'Wellness',
               value: 'wellness',
-              checked: false
+              checked: false,
+              bgClass: 'bg1a'
             },
             {
               displayValue: 'Abenteuer',
               value: 'adventure',
-              checked: false
+              checked: false,
+              bgClass: 'bg1b'
             },
             {
               displayValue: 'Pauschal',
               value: 'package',
-              checked: false
+              checked: false,
+              bgClass: 'bg1c'
             },
             {
               displayValue: 'Kurzurlaub',
               value: 'shortTrip',
-              checked: false
+              checked: false,
+              bgClass: 'bg1d'
             },
             {
               displayValue: 'Städtereise',
               value: 'cityTrip',
-              checked: false
+              checked: false,
+              bgClass: 'bg1e'
             },
             {
               displayValue: 'Strand',
               value: 'beach',
-              checked: false
+              checked: false,
+              bgClass: 'bg1f'
             },
             {
               displayValue: 'Rucksack',
               value: 'backpack',
-              checked: false
+              checked: false,
+              bgClass: 'bg1g'
             }
           ]
         },
@@ -201,37 +249,44 @@
             {
               displayValue: 'Bahn',
               value: 'train',
-              checked: false
+              checked: false,
+              bgClass: 'bg2a'
             },
             {
               displayValue: 'Bus',
               value: 'bus',
-              checked: false
+              checked: false,
+              bgClass: 'bg2b'
             },
             {
               displayValue: 'ÖPNV',
               value: 'publicTransport',
-              checked: false
+              checked: false,
+              bgClass: 'bg2c'
             },
             {
               displayValue: 'PKW',
               value: 'car',
-              checked: false
+              checked: false,
+              bgClass: 'bg2d'
             },
             {
               displayValue: 'Flugzeug',
               value: 'plain',
-              checked: false
+              checked: false,
+              bgClass: 'bg2e'
             },
             {
               displayValue: 'Schiff',
               value: 'ship',
-              checked: false
+              checked: false,
+              bgClass: 'bg2f'
             },
             {
               displayValue: 'Motorrad',
               value: 'motorbike',
-              checked: false
+              checked: false,
+              bgClass: 'bg2g'
             }
           ]
         },
@@ -243,22 +298,26 @@
             {
               displayValue: 'Luxus',
               value: 'luxury',
-              checked: false
+              checked: false,
+              bgClass: 'bg3a'
             },
             {
               displayValue: 'Gehobene Ausstattung',
               value: 'uptown',
-              checked: false
+              checked: false,
+              bgClass: 'bg3b'
             },
             {
               displayValue: 'Einfache Ausstattung',
               value: 'simple',
-              checked: false
+              checked: false,
+              bgClass: 'bg3c'
             },
             {
               displayValue: 'Puristisch',
               value: 'puristic',
-              checked: false
+              checked: false,
+              bgClass: 'bg3d'
             }
           ]
         },
@@ -270,42 +329,50 @@
             {
               displayValue: 'Regional',
               value: 'nearby',
-              checked: false
+              checked: false,
+              bgClass: 'bg4a'
             },
             {
               displayValue: 'Deutschland',
               value: 'germany',
-              checked: false
+              checked: false,
+              bgClass: 'bg4b'
             },
             {
               displayValue: 'Europa',
               value: 'europe',
-              checked: false
+              checked: false,
+              bgClass: 'bg4c'
             },
             {
               displayValue: 'Amerika',
               value: 'america',
-              checked: false
+              checked: false,
+              bgClass: 'bg4d'
             },
             {
               displayValue: 'Afrika',
               value: 'africa',
-              checked: false
+              checked: false,
+              bgClass: 'bg4e'
             },
             {
               displayValue: 'Asien',
               value: 'asia',
-              checked: false
+              checked: false,
+              bgClass: 'bg4f'
             },
             {
               displayValue: 'Australien',
               value: 'australia',
-              checked: false
+              checked: false,
+              bgClass: 'bg4g'
             },
             {
               displayValue: 'Weltweit',
               value: 'worldwide',
-              checked: false
+              checked: false,
+              bgClass: 'bg4h'
             }
           ]
         },
@@ -317,33 +384,39 @@
             {
               displayValue: 'Max. 5 Tage',
               value: '5daysMac',
-              checked: false
+              checked: false,
+              bgClass: 'bg5'
             },
             {
               displayValue: '1 Woche',
               value: '1week',
-              checked: false
+              checked: false,
+              bgClass: 'bg5'
             },
             {
               displayValue: '2 Wochen',
               value: '2weeks',
-              checked: false
+              checked: false,
+              bgClass: 'bg5'
             },
             {
               displayValue: '3 Wochen',
               value: '3weeks',
-              checked: false
+              checked: false,
+              bgClass: 'bg5'
             },
             {
               displayValue: '4 Wochen und länger',
               value: '4+weeks',
-              checked: false
+              checked: false,
+              bgClass: 'bg5'
             }
           ]
         },
         result : {
           displayValue : 'Auswertung',
-          value : 'result'
+          value : 'result',
+          bgClass: 'bg6'
         }
       })
     }
