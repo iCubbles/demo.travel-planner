@@ -14,6 +14,7 @@ travel-planner {
     background-position: center;
     background-size: cover;
     transition: background-image 1s ease-in-out;
+    -webkit-transition: background-image 1s ease-in-out;
 }
 
 .header {
