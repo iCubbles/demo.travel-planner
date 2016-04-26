@@ -103,10 +103,15 @@ main-nav .step-btns .btn-primary {
     box-shadow: none;
 }
 
-category-value-select .btn-group-vertical{
+category-value-select .btn-group-vertical {
     width: 200px;
 }
 
+travel-evaluation .link-container {
+    width: 250px;
+}
+
+travel-evaluation .btn,
 category-value-select .btn {
     font-size: 15px;
     font-weight: 500;

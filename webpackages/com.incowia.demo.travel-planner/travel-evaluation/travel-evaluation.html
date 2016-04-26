@@ -6,6 +6,11 @@
         <div>
             <h2 class="heading">Auswertung</h2>
             <div class="arrow-down"></div>
+            <div class="link-container">
+                <template is="dom-repeat" items="{{options}}" as="operator">
+                    <a class="btn btn-primary operator-link" href="{{operator.href}}" target="_blank">{{operator.displayValue}}</a>
+                </template>
+            </div>
         </div>
     </template>
 
