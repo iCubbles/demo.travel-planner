@@ -201,43 +201,50 @@
               displayValue: 'Wellness',
               value: 'wellness',
               checked: false,
-              bgClass: 'bg1a'
+              bgClass: 'bg1a',
+              co2Count: 10,
             },
             {
               displayValue: 'Abenteuer',
               value: 'adventure',
               checked: false,
-              bgClass: 'bg1b'
+              bgClass: 'bg1b',
+              co2Count: 5
             },
             {
               displayValue: 'Pauschal',
               value: 'package',
               checked: false,
-              bgClass: 'bg1c'
+              bgClass: 'bg1c',
+              co2Count: 5
             },
             {
               displayValue: 'Kurzurlaub',
               value: 'shortTrip',
               checked: false,
-              bgClass: 'bg1d'
+              bgClass: 'bg1d',
+              co2Count: 5
             },
             {
               displayValue: 'Städtereise',
               value: 'cityTrip',
               checked: false,
-              bgClass: 'bg1e'
+              bgClass: 'bg1e',
+              co2Count: 10
             },
             {
               displayValue: 'Strand',
               value: 'beach',
               checked: false,
-              bgClass: 'bg1f'
+              bgClass: 'bg1f',
+              co2Count: 5
             },
             {
               displayValue: 'Rucksack',
               value: 'backpack',
               checked: false,
-              bgClass: 'bg1g'
+              bgClass: 'bg1g',
+              co2Count: 0
             }
           ]
         },
@@ -250,43 +257,50 @@
               displayValue: 'Bahn',
               value: 'train',
               checked: false,
-              bgClass: 'bg2a'
+              bgClass: 'bg2a',
+              co2Count: 10
             },
             {
               displayValue: 'Bus',
               value: 'bus',
               checked: false,
-              bgClass: 'bg2b'
+              bgClass: 'bg2b',
+              co2Count: 15
             },
             {
               displayValue: 'ÖPNV',
               value: 'publicTransport',
               checked: false,
-              bgClass: 'bg2c'
+              bgClass: 'bg2c',
+              co2Count: 10
             },
             {
               displayValue: 'PKW',
               value: 'car',
               checked: false,
-              bgClass: 'bg2d'
+              bgClass: 'bg2d',
+              co2Count: 20
             },
             {
               displayValue: 'Flugzeug',
               value: 'plain',
               checked: false,
-              bgClass: 'bg2e'
+              bgClass: 'bg2e',
+              co2Count: 45
             },
             {
               displayValue: 'Schiff',
               value: 'ship',
               checked: false,
-              bgClass: 'bg2f'
+              bgClass: 'bg2f',
+              co2Count: 55
             },
             {
               displayValue: 'Motorrad',
               value: 'motorbike',
               checked: false,
-              bgClass: 'bg2g'
+              bgClass: 'bg2g',
+              co2Count: 15
             }
           ]
         },
@@ -299,25 +313,29 @@
               displayValue: 'Luxus',
               value: 'luxury',
               checked: false,
-              bgClass: 'bg3a'
+              bgClass: 'bg3a',
+              co2Count: 15
             },
             {
               displayValue: 'Gehobene Ausstattung',
               value: 'uptown',
               checked: false,
-              bgClass: 'bg3b'
+              bgClass: 'bg3b',
+              co2Count: 10
             },
             {
               displayValue: 'Einfache Ausstattung',
               value: 'simple',
               checked: false,
-              bgClass: 'bg3c'
+              bgClass: 'bg3c',
+              co2Count: 5
             },
             {
               displayValue: 'Puristisch',
               value: 'puristic',
               checked: false,
-              bgClass: 'bg3d'
+              bgClass: 'bg3d',
+              co2Count: 0
             }
           ]
         },
@@ -330,49 +348,57 @@
               displayValue: 'Regional',
               value: 'nearby',
               checked: false,
-              bgClass: 'bg4a'
+              bgClass: 'bg4a',
+              co2Count: 5
             },
             {
               displayValue: 'Deutschland',
               value: 'germany',
               checked: false,
-              bgClass: 'bg4b'
+              bgClass: 'bg4b',
+              co2Count: 10
             },
             {
               displayValue: 'Europa',
               value: 'europe',
               checked: false,
-              bgClass: 'bg4c'
+              bgClass: 'bg4c',
+              co2Count: 15
             },
             {
               displayValue: 'Amerika',
               value: 'america',
               checked: false,
-              bgClass: 'bg4d'
+              bgClass: 'bg4d',
+              co2Count: 25
             },
             {
               displayValue: 'Afrika',
               value: 'africa',
               checked: false,
-              bgClass: 'bg4e'
+              bgClass: 'bg4e',
+              co2Count: 25
             },
             {
               displayValue: 'Asien',
               value: 'asia',
               checked: false,
-              bgClass: 'bg4f'
+              bgClass: 'bg4f',
+              co2Count: 25
             },
             {
               displayValue: 'Australien',
               value: 'australia',
               checked: false,
-              bgClass: 'bg4g'
+              bgClass: 'bg4g',
+              co2Count: 30
             },
             {
               displayValue: 'Weltweit',
               value: 'worldwide',
               checked: false,
-              bgClass: 'bg4h'
+              bgClass: 'bg4h',
+              co2Count: 30
             }
           ]
         },
@@ -385,31 +411,36 @@
               displayValue: 'Max. 5 Tage',
               value: '5daysMac',
               checked: false,
-              bgClass: 'bg5'
+              bgClass: 'bg5',
+              co2Count: 5
             },
             {
               displayValue: '1 Woche',
               value: '1week',
               checked: false,
-              bgClass: 'bg5'
+              bgClass: 'bg5',
+              co2Count: 8
             },
             {
               displayValue: '2 Wochen',
               value: '2weeks',
               checked: false,
-              bgClass: 'bg5'
+              bgClass: 'bg5',
+              co2Count: 10
             },
             {
               displayValue: '3 Wochen',
               value: '3weeks',
               checked: false,
-              bgClass: 'bg5'
+              bgClass: 'bg5',
+              co2Count: 12
             },
             {
               displayValue: '4 Wochen und länger',
               value: '4+weeks',
               checked: false,
-              bgClass: 'bg5'
+              bgClass: 'bg5',
+              co2Count: 15
             }
           ]
         },

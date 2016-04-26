@@ -41,7 +41,7 @@
      */
     cubxReady: function () {
       this._cubxReady = true
-      if (this.getValue()) {
+      if (typeof this.getValue() === 'number') {
         this._setValue(this.getValue())
       }
     },

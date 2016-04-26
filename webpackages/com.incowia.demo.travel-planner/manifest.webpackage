@@ -205,7 +205,8 @@
             "endpointId": "main",
             "resources": [
               "css/travel-planner.css",
-              "travel-planner.html"
+              "travel-planner.html",
+              "hookFunctions.js"
             ],
             "dependencies": [
               "bootstrap-3.3.5@1.0.3/bootstrap/html-import",
@@ -290,6 +291,18 @@
               "memberIdRef": "evaluation",
               "slot": "selections"
             }
+          },
+          {
+            "connectionId": "mainNavToFootprint",
+            "source": {
+              "memberIdRef": "mainNav",
+              "slot": "selections"
+            },
+            "destination": {
+              "memberIdRef": "footprint",
+              "slot": "value"
+            },
+            "hookFunction": "com_incowia_demo_travel_planner.determineCO2Value"
           }
         ],
         "inits": [
@@ -306,7 +319,7 @@
           {
             "memberIdRef": "footprint",
             "slot": "value",
-            "value": 50
+            "value": 0
           }
         ]
       }
