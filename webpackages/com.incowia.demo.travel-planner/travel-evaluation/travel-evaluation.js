@@ -20,6 +20,7 @@
     ready: function () {
       this._initOperators()
       this.set('options', [])
+      this.set('noOptions', true)
     },
 
     /**
@@ -66,14 +67,18 @@
         for (var key in options) {
           this.push('options', options[key])
         }
+        this.set('noOptions', false)
       } else if (!typeOfTravel && region) {
         for (var key in operators) {
           this.push('options', operators[key]['region_' + region])
         }
+        this.set('noOptions', false)
       } else if (typeOfTravel && region) {
         this.push('options', operators['typeOfTravel_' + typeOfTravel]['region_' + region])
+        this.set('noOptions', false)
+      } else {
+        this.set('noOptions', true)
       }
-
     },
 
     _emptyOptions : function() {

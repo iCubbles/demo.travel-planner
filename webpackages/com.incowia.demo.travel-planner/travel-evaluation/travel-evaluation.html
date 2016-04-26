@@ -10,6 +10,9 @@
                 <template is="dom-repeat" items="{{options}}" as="operator">
                     <a class="btn btn-primary operator-link" href="{{operator.href}}" target="_blank">{{operator.displayValue}}</a>
                 </template>
+                <template is="dom-if" if="{{noOptions}}">
+                    <div class="choose-option-hint">Bitte wählen Sie eine Reiseart und/oder eine Region.</div>
+                </template>
             </div>
         </div>
     </template>

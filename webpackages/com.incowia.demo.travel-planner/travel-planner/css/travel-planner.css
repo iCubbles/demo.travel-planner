@@ -59,6 +59,7 @@ co2-footprint svg{
     border-top-right-radius: 0px;
 }
 
+travel-evaluation .choose-option-hint,
 .btn-primary {
     background-color: #93d661;
     border-left-color: #93d661;
@@ -108,7 +109,12 @@ category-value-select .btn-group-vertical {
     width: 200px;
 }
 
+travel-evaluation .choose-option-hint {
+    padding: 12px;
+}
+
 travel-evaluation .btn,
+travel-evaluation .choose-option-hint,
 category-value-select .btn {
     font-size: 15px;
     font-weight: 500;
