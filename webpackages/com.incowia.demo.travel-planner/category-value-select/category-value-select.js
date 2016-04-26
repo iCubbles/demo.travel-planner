@@ -58,14 +58,18 @@
 
       for (var key in category.options) {
         if (category.options[key].value === value) {
-          category.options[key].checked = true
+            category.options[key].checked = !category.options[key].checked
+          if (category.options[key].checked) {
+            //set category to checked (means this category has an option selected)
+            category.checked = true
+          } else {
+            //set category to unchecked (means this category has no option selected)
+            category.checked = false
+          }
         } else {
           category.options[key].checked = false
         }
       }
-
-      //set category to checked (means this category has an option selected)
-      category.checked = true
 
       this.setCategory(category)
     },
@@ -95,6 +99,6 @@
         return ''
       }
     }
-      
+
   });
 }());
