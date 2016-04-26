@@ -13,6 +13,7 @@ travel-planner {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    transition: background-image 1s ease-in-out;
 }
 
 .header {
