@@ -103,12 +103,9 @@ main-nav .step-btns .btn-primary {
     box-shadow: none;
 }
 
+travel-evaluation .link-container,
 category-value-select .btn-group-vertical {
     width: 200px;
-}
-
-travel-evaluation .link-container {
-    width: 250px;
 }
 
 travel-evaluation .btn,
