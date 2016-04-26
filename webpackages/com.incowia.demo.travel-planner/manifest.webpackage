@@ -206,7 +206,7 @@
             "resources": [
               "css/travel-planner.css",
               "travel-planner.html",
-              "hookFunctions.js"
+              "jsFunctions.js"
             ],
             "dependencies": [
               "bootstrap-3.3.5@1.0.3/bootstrap/html-import",

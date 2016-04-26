@@ -5,7 +5,10 @@
     <div class="content">
         <category-value-select member-id-ref="catValueSelect"></category-value-select>
         <travel-evaluation member-id-ref="evaluation"></travel-evaluation>
-        <co2-footprint member-id-ref="footprint"></co2-footprint>
+        <div class="footprint-container">
+            <button type="button" class="btn btn-primary toggle-footprint" onclick="com_incowia_demo_travel_planner.toggleFootprontVisibility()">Klimaneutral?</button>
+            <co2-footprint member-id-ref="footprint"></co2-footprint>
+        </div>
     </div>
     <div class="main-nav-container">
         <main-nav member-id-ref="mainNav"></main-nav>

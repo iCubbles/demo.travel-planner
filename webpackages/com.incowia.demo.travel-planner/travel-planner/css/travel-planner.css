@@ -48,11 +48,23 @@ co2-footprint {
     background-position-y: 68px;
     background-size: 68%;
     width: 100px;
+    align-self: flex-end;
+    margin-top: -60px;
 }
 
 co2-footprint svg{
     position: relative;
     right: -18px;
+}
+
+travel-planner .toggle-footprint{
+    margin-top: 20px;
+    z-index: 1;
+}
+
+travel-planner .footprint-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-group-vertical>.btn:first-child:not(:last-child) {
@@ -113,6 +125,7 @@ travel-evaluation .choose-option-hint {
     padding: 12px;
 }
 
+travel-planner .toggle-footprint,
 travel-evaluation .btn,
 travel-evaluation .choose-option-hint,
 category-value-select .btn {
