@@ -42,7 +42,8 @@ module.exports = function (grunt) {
           openBrowser: true,
 
           //set networkProxyUrl if you need to connect to given proxy server using a proxy
-          // networkProxyUrl: [proto]://[host]:[port] e.g. http://proxy:1234
+          // networkProxyUrl: '[proto]://[host]:[port]' e.g. 'http://proxy:1234'
+          networkProxyUrl: 'http://192.168.70.107:808'
         }
       }
     }
