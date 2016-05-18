@@ -12,7 +12,19 @@
   "keywords": [],
   "man": [],
   "artifacts": {
-    "apps": [],
+    "apps": [
+      {
+        "artifactId": "docs",
+        "description": "Structure and dataflow viewer for this webpackage",
+        "runnables": [
+          {
+            "name": "travel-planner docs",
+            "path": "/index.html",
+            "description": "Call this app as a simple demo."
+          }
+        ]
+      }
+    ],
     "elementaryComponents": [
       {
         "artifactId": "category-value-select",
@@ -198,6 +210,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Travel planner component in action"
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Dataflow of the component"
           }
         ],
         "endpoints": [
