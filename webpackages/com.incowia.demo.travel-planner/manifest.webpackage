@@ -18,7 +18,7 @@
         "description": "Structure and dataflow viewer for this webpackage",
         "runnables": [
           {
-            "name": "travel-planner docs",
+            "name": "docs",
             "path": "/index.html",
             "description": "Call this app as a simple demo."
           }
@@ -34,6 +34,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app for <category-value-select> component."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Interface of the component"
           }
         ],
         "endpoints": [
@@ -44,7 +49,7 @@
               "category-value-select.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main",
+              "cubx.core.rte@1.9.0/cubxpolymer/main",
               "bootstrap-3.3.5@1.0.3/bootstrap/html-import"
             ]
           }
@@ -75,6 +80,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app for <main-nav> component"
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Interface of the component"
           }
         ],
         "endpoints": [
@@ -85,7 +95,7 @@
               "main-nav.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main",
+              "cubx.core.rte@1.9.0/cubxpolymer/main",
               "bootstrap-3.3.5@1.0.3/bootstrap/html-import"
             ]
           }
@@ -136,6 +146,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Interface of the component"
           }
         ],
         "endpoints": [
@@ -146,7 +161,7 @@
               "travel-evaluation.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main",
+              "cubx.core.rte@1.9.0/cubxpolymer/main",
               "bootstrap-3.3.5@1.0.3/bootstrap/html-import"
             ]
           }
@@ -176,6 +191,11 @@
             "name": "demo",
             "path": "/demo/index.html",
             "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Interface of the component"
           }
         ],
         "endpoints": [
@@ -186,7 +206,7 @@
               "co2-footprint.html"
             ],
             "dependencies": [
-              "cubx.core.rte@1.8.0/cubxpolymer/main"
+              "cubx.core.rte@1.9.0/cubxpolymer/main"
             ]
           }
         ],
