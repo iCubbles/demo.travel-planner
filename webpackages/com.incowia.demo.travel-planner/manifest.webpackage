@@ -1,8 +1,8 @@
 {
   "name": "travel-planner",
   "groupId": "com.incowia.demo",
-  "version": "0.2.0-SNAPSHOT",
-  "modelVersion": "8.3.0",
+  "version": "0.3.0-SNAPSHOT",
+  "modelVersion": "9.1.1",
   "docType": "webpackage",
   "author": {
     "name": "Philipp Wagner",
@@ -41,19 +41,6 @@
             "description": "Interface of the component"
           }
         ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "category-value-select.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main",
-              "bootstrap-3.3.5@1.0.3/bootstrap/html-import"
-            ]
-          }
-        ],
         "slots": [
           {
             "slotId": "category",
@@ -70,6 +57,19 @@
               "input"
             ]
           }
+        ],
+        "resources": [
+          "category-value-select.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.4.0",
+            "artifactId": "cubxpolymer"
+          },
+          {
+            "webpackageId": "bootstrap-3.3.5@1.1.1",
+            "artifactId": "bootstrap-bootstrap-css-only"
+          }
         ]
       },
       {
@@ -85,19 +85,6 @@
             "name": "docs",
             "path": "/docs/index.html",
             "description": "Interface of the component"
-          }
-        ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "main-nav.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main",
-              "bootstrap-3.3.5@1.0.3/bootstrap/html-import"
-            ]
           }
         ],
         "slots": [
@@ -136,6 +123,19 @@
               "output"
             ]
           }
+        ],
+        "resources": [
+          "main-nav.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.4.0",
+            "artifactId": "cubxpolymer"
+          },
+          {
+            "webpackageId": "bootstrap-3.3.5@1.1.1",
+            "artifactId": "bootstrap-bootstrap-css-only"
+          }
         ]
       },
       {
@@ -153,19 +153,6 @@
             "description": "Interface of the component"
           }
         ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "travel-evaluation.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main",
-              "bootstrap-3.3.5@1.0.3/bootstrap/html-import"
-            ]
-          }
-        ],
         "slots": [
           {
             "slotId": "selections",
@@ -180,6 +167,19 @@
             "direction": [
               "input"
             ]
+          }
+        ],
+        "resources": [
+          "travel-evaluation.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.4.0",
+            "artifactId": "cubxpolymer"
+          },
+          {
+            "webpackageId": "bootstrap-3.3.5@1.1.1",
+            "artifactId": "bootstrap-bootstrap-css-only"
           }
         ]
       },
@@ -198,18 +198,6 @@
             "description": "Interface of the component"
           }
         ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "description": "This is recommended for you use with webcomponents.",
-            "resources": [
-              "co2-footprint.html"
-            ],
-            "dependencies": [
-              "cubx.core.rte@1.9.0/cubxpolymer/main"
-            ]
-          }
-        ],
         "slots": [
           {
             "slotId": "value",
@@ -217,6 +205,15 @@
             "direction": [
               "input"
             ]
+          }
+        ],
+        "resources": [
+          "co2-footprint.html"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "cubx.core.rte@2.4.0",
+            "artifactId": "cubxpolymer"
           }
         ]
       }
@@ -237,40 +234,23 @@
             "description": "Dataflow of the component"
           }
         ],
-        "endpoints": [
-          {
-            "endpointId": "main",
-            "resources": [
-              "css/travel-planner.css",
-              "travel-planner.html",
-              "jsFunctions.js"
-            ],
-            "dependencies": [
-              "bootstrap-3.3.5@1.0.3/bootstrap/html-import",
-              "this/main-nav/main",
-              "this/category-value-select/main",
-              "this/travel-evaluation/main",
-              "this/co2-footprint/main"
-            ]
-          }
-        ],
         "slots": [],
         "members": [
           {
             "memberId": "mainNav",
-            "componentId": "this/main-nav"
+            "artifactId": "main-nav"
           },
           {
             "memberId": "catValueSelect",
-            "componentId": "this/category-value-select"
+            "artifactId": "category-value-select"
           },
           {
             "memberId": "evaluation",
-            "componentId": "this/travel-evaluation"
+            "artifactId": "travel-evaluation"
           },
           {
             "memberId": "footprint",
-            "componentId": "this/co2-footprint"
+            "artifactId": "co2-footprint"
           }
         ],
         "connections": [
@@ -357,6 +337,29 @@
             "memberIdRef": "footprint",
             "slot": "value",
             "value": 0
+          }
+        ],
+        "resources": [
+          "css/travel-planner.css",
+          "travel-planner.html",
+          "jsFunctions.js"
+        ],
+        "dependencies": [
+          {
+            "webpackageId": "bootstrap-3.3.5@1.1.1",
+            "artifactId": "bootstrap-bootstrap-css-only"
+          },
+          {
+            "artifactId": "main-nav"
+          },
+          {
+            "artifactId": "category-value-select"
+          },
+          {
+            "artifactId": "travel-evaluation"
+          },
+          {
+            "artifactId": "co2-footprint"
           }
         ]
       }
